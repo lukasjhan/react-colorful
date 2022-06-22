@@ -83,7 +83,6 @@ const InteractiveBase = ({ onMove, onKey, ...rest }: Props) => {
         if (changedTouches.length) touchId.current = changedTouches[0].identifier;
       }
 
-      el.focus();
       onMoveCallback(getRelativePosition(el, nativeEvent, touchId.current));
       toggleDocumentEvents(true);
     };
